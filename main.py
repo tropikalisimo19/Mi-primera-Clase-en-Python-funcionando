@@ -1,9 +1,9 @@
-#Clase
+##CLASE##
 class Fraction():
     ##ATRIBUTOS##
     numerator = 0
-    denominator = 0
-    ##Fin Atributos##
+    denominator = 1
+    ##FIN ATRIBUTOS##
 
     ##CONSTRUCTOR##
     def __init__(self,numerator,denominator):
@@ -11,7 +11,7 @@ class Fraction():
         self.denominator = denominator
     ##FIN CONSTRUCTOR##
 
-    ##Metodos##
+    ##METODOS##
     def multiplication(self,other):
         numerator = self.numerator * other.numerator
         denominator = self.denominator * other.denominator
@@ -46,27 +46,19 @@ numerator_1 = 0
 numerator_2 = 0
 denominator_1 = 0
 denominator_2 = 0
-f_1 = 0
-f_2 = 0
+fraction1 = 0
+fraction2 = 0
 opcion = 0
     ##ENTRADA DE DATOS##
 numerator_1 = int(input("Numerador fraccion A: "))
-int(input(denominator_1 == 0):
-    denominator_1 = int(input("Denomiandor fraccion A: "))
-    int(input(denominator_1!=0):
-        break
-    print("Ingresar otro dato que no sea 0")
+denominator_1 = int(input("Denominador fraccio A:"))
 numerator_2 = int(input("Numerador fraccion B: "))
-int(input(denominator_2 == 0):
-    denominator_2 = int(input("Denominador fraccion B: "))
-    int(input(denominator_2!=0):
-        break
-    print("Ingresar otro dato que no sea 0")
+denominator_2 = int(input("Denominador fraccio B:"))
 
-f_1 = Fraction(numerator_1, denominator_1)
-print("Fraccion A =",f_1.numerator,"/",f_1.denominator)
-f_2 = Fraction(numerator_2, denominator_2)
-print("Fraccion B =",f_2.numerator,"/",f_2.denominator)
+fraction1 = Fraction(numerator_1, denominator_1)
+print("Fraccion A =",fraction1.numerator,"/",fraction1.denominator)
+fraction2 = Fraction(numerator_2, denominator_2)
+print("Fraccion B =",fraction2.numerator,"/",fraction2.denominator)
 
         ##MOSTRAR EN PANTALLA##
 print("\n========FRACCIONES MATEMATICAS========\n")
@@ -77,3 +69,13 @@ print("Si es division seleccione la opción:(/)\n")
 print("===============================================\n")
 opcion = input("Ingrese su opción (+ - * /):")
 
+if(opcion =='+'):
+    fraction1.addition(fraction2)
+elif(opcion =='-'):
+    fraction1.substraccion(fraction2)
+elif(opcion =='*'):
+    fraction1.multiplication(fraction2)
+elif(opcion =='/'):
+    fraction1.division(fraction2)
+else:
+    print("ingrese un simbolo adecuado")
