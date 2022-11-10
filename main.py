@@ -71,11 +71,11 @@ opcion = input("Ingrese su opción (+ - * /):")
 
 if(opcion =='+'):
     fraction1.addition(fraction2)
-elif(opcion =='-'):
+if(opcion =='-'):
     fraction1.substraccion(fraction2)
-elif(opcion =='*'):
+if(opcion =='*'):
     fraction1.multiplication(fraction2)
-elif(opcion =='/'):
+if(opcion =='/'):
     fraction1.division(fraction2)
 else:
-    print("ingrese un simbolo adecuado")
+    print("ingrese un dato valido")
